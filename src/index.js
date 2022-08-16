@@ -9,10 +9,6 @@ import rootReducer from './store/reducers/rootReducer'
 
 const store = createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-// const store = createStore(
-//   reducer, /* preloadedState, */
-// +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
 ReactDOM.render(
 <React.StrictMode>
   <Provider store={store}>
