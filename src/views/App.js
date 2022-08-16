@@ -11,34 +11,42 @@ import {
 } from 'react-router-dom';
 import Home from '../components/Home'
 import Nav from '../components/Nav'
+import Listuser from '../components/Listuser';
+import Detailuser from '../components/Detailuser';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <Nav/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/listtodo">
-            <Form />
-          </Route>
-        </Switch>
-      </header>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-    </div>
+      <div className="App">
+        <Nav />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/listtodo">
+              <Form />
+            </Route>
+            <Route path="/listuser" exact>
+              <Listuser />
+            </Route>
+            <Route path="/listuser/:id">
+              <Detailuser />
+            </Route>
+          </Switch>
+        </header>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </div>
     </BrowserRouter>
   );
 }

@@ -10,6 +10,7 @@ class Nav extends React.Component {
                 <div className='topnav'>
                     <NavLink to='/' exact={true}>Home</NavLink>
                     <NavLink to='/listtodo'>Todo-List</NavLink>
+                    <NavLink to='/listuser'>List-user</NavLink>
                 </div>
             </>
         )
