@@ -2,42 +2,44 @@ import React from "react";
 import { connect } from 'react-redux'
 class Home extends React.Component {
 
+    
     delete = (item) => {
-        this.props.Deleteuser(item)
+        this.props.deleteuser(item)
     }
-
+    
     add = () => {
-        this.props.Adduser()
+        this.props.adduser()
     }
     render() {
-        let listuser = this.props.data;
+        let listuser = this.props.data
         return (
             <div>
-                {listuser.map((item, index) => {
-                    return (
-                        <>
-                            <div key={item.id}>
-                                <span>{index + 1} - {item.name}</span> <span onClick={() => this.delete(item)}>X</span>
-                            </div>
-                        </>
+                {listuser.map((item,index) => {
+                    return(
+                        <div>
+                            {index +1} - {item.name} <span onClick={() => this.delete(item)}>X</span>
+                            {localStorage.removeItem("username1")}
+                        </div>
+                        
                     )
                 })}
-                <div>
-                    <button onClick={() => this.add()}>Add</button>
-                </div>
+                <button onClick={() => this.add()}>Add</button>
             </div>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    return { data: state.user }
+return {
+    data: state.user
+}
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        Deleteuser: (deleteuser) => dispatch({ type: 'DELETE_USER', payload: deleteuser }),
-        Adduser: () => dispatch({type:'ADD_USER'})
+        deleteuser:(user) => dispatch({type:'DELETE_USER', payload:user}),
+        adduser: () => dispatch({type:'ADD_USER'})
     }
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
