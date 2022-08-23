@@ -1,13 +1,13 @@
 .container{
     display: flex;
-    width: 100%;
+    width: 1500px;
     text-align: left;
     height: 700px;
     .content-left{
         border-right: 1px solid rgba(168, 162, 162, 0.3);
         width: 45%;
         margin-left: none;
-        
+        background-color: #fafafa;
         .picture-up{
             img{
                 width: 350px;
@@ -16,14 +16,20 @@
         }
         .picture-down{
             display: flex;
+            width: 400px;
+            border:1px solid grey;
+            
             .img-small{
+                .active{
+                    border: 2px solid rgb(11, 141, 228);
+                    }
                 img{
-                    border: 1px solid grey;
                     width:80px;
                     height: 80px;
                     cursor: pointer;
                     margin:5px;
                     text-align: center;
+                        
                 }
             }
         }
@@ -32,17 +38,22 @@
     .content-right{
         width: 55%;
         margin-left: 10px;
+        background-color:  #fafafa;;
+        
     }  
 
     .shoes{
         font-weight: 90;
         margin: 5px 0px 40px 0px;
-        color:black
+        color:black;
+        margin-left: 15px;
+
     }
     .size{
         font-size: 17px;
         margin-bottom: 300px;
-        color:black
+        color:black;
+        margin-left: 15px;
     }
     .quantity{
         font-size: 20px;
@@ -50,17 +61,19 @@
         color: #ff424e;
         font-size: 15px;
         font-weight: 400;
+        margin-left: 15px;
     }
     .price{
         color: #ff424e;
         font-size: 32px;
         margin: 0px 0px 90px 20px;
-        
+        margin-left: 15px;
         line-height: 40px;
     }
     .input{
         display: block;
         width: 30px;
+        margin-left: 15px;
         
     }
     .buy{
@@ -73,6 +86,7 @@
         color:white;
         font-size:15px;
         font-weight: bold;
+        margin-left: 15px;
     }
     
 }

@@ -13,9 +13,9 @@ import Home from '../components/Home'
 import Nav from '../components/Nav'
 import Listuser from '../components/Listuser';
 import Detailuser from '../components/Detailuser';
-import Template from '../components/Template'
+import Templatee from '../components/Templatee'
 import 'react-image-lightbox/style.css'
-
+import Covid from '../components/Covid';
 function App() {
   return (
     <BrowserRouter>
@@ -37,7 +37,10 @@ function App() {
               <Detailuser />
             </Route>
             <Route path="/template">
-              <Template/>
+              <Templatee/>
+            </Route>
+            <Route path="/covid-19">
+              <Covid/>
             </Route>
           </Switch>
         </header>

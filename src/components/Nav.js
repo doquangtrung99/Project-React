@@ -12,6 +12,7 @@ class Nav extends React.Component {
                     <NavLink to='/listtodo'>Todo-List</NavLink>
                     <NavLink to='/listuser'>List-user</NavLink>
                     <NavLink to='/template'>Template</NavLink>
+                    <NavLink to='/covid-19'>Covid-19</NavLink>
                 </div>
             </>
         )

@@ -21,11 +21,12 @@ class Listuser extends React.Component{
         let {arr} = this.state
         return(
             <>
+                <div className="list-user">LIST USER</div>
                 {arr.map((item,index) => {
                     return(
-                        <>
-                        <div className="name" key={item.id} onClick={() => this.click(item)}>{index +1} - {item.first_name} - {item.last_name}</div>
-                        </>
+                        <div className="name" key={item.id}  onClick={() => this.click(item)  }>
+                            {index +1} - {item.first_name} - {item.last_name}
+                        </div>
                     )
                 })}
             </>
