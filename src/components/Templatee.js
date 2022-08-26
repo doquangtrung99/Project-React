@@ -18,11 +18,21 @@ const Templatee = () => {
     const [currentUpImage, setcurrentUpImage] = useState(picture1)
     const [isOpen,setIsOpen] = useState(true)
     const [photoIndex,setPhotoIndex] = useState(0)
+    const [number, setNumber] = useState(0)
     
     const handleclick = () => {
         setIsOpen(false);
         let indexOjb = images.findIndex(item => item === currentUpImage)
         setPhotoIndex(indexOjb)
+    }
+    const clicksub = () => {
+        if(number === 0){
+            return;
+        }
+        setNumber(number -1)
+    }
+    const clickadd = () => {
+        setNumber(number +1)
     }
     return (
         <div className="container">
@@ -52,7 +62,12 @@ const Templatee = () => {
                 <div className="price">1.658.000 ₫</div>
                 <div className="size">Size: 42</div>
                 <div className="quantity">Số Lượng</div>
-                <input className="input" value={1} type='number' min={1} />
+                <div className="input" >
+                <button onClick={() => clicksub()}>-</button>
+                <input  value={number} />
+                <button onClick={() => clickadd()}>+</button>
+                </div>
+               
                 <button className="buy" >Chọn Mua</button>
             </div>
             <div>

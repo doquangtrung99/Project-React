@@ -16,6 +16,10 @@ import Detailuser from '../components/Detailuser';
 import Templatee from '../components/Templatee'
 import 'react-image-lightbox/style.css'
 import Covid from '../components/Covid';
+import Blog from '../components/Blog';
+import Viewdetail from '../components/Viewdetail';
+import AddNewBlog from '../components/AddNewBlog';
+
 function App() {
   return (
     <BrowserRouter>
@@ -41,6 +45,15 @@ function App() {
             </Route>
             <Route path="/covid-19">
               <Covid/>
+            </Route>
+            <Route path="/blog" exact>
+              <Blog/>
+            </Route>
+            <Route path="/blog/:id">
+              <Viewdetail/>
+            </Route>
+            <Route path="/add-new-user">
+              <AddNewBlog/>
             </Route>
           </Switch>
         </header>

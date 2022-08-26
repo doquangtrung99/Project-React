@@ -1,16 +1,17 @@
 import React from "react";
 import useFetch from "./Fetch";
-
+import moment from "moment";
 
 const Covid = () => {
-
-    let {data,loading,error} = useFetch('https://api.covid19api.com/country/vietnam?from=2020-10-01T00:00:00Z&to=2020-10-20T00:00:00Z')
+    
+    const today = moment().startOf('day').toISOString(true);;
+    const priorDate = moment().startOf('day').subtract(31, 'days').toISOString(true);;
+    let {data,loading,error} = useFetch(`https://api.covid19api.com/country/vietnam?from=${priorDate}&to=${today}`, false)
     
     return (
-       
         <div>
             <table>
-                <thead>
+                <thead> 
                 <tr>
                     <th>Date</th>
                     <th>Confirmed</th>

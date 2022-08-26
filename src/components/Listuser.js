@@ -2,6 +2,8 @@ import React from "react";
 import axios from 'axios'
 import '../styles/Listuser.scss'
 import {withRouter} from 'react-router-dom'
+import {Timer, SetTimer} from "./Timer";
+
 class Listuser extends React.Component{
     
     state = {
@@ -21,6 +23,11 @@ class Listuser extends React.Component{
         let {arr} = this.state
         return(
             <>
+                <div>
+                    <Timer/>
+                    <span>---------------------</span>
+                    <SetTimer/>
+                </div>
                 <div className="list-user">LIST USER</div>
                 {arr.map((item,index) => {
                     return(
