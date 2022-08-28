@@ -1,3 +1,45 @@
+<<<<<<< HEAD
 .Container{
     display: inline-flex;
+=======
+
+.container0{
+    margin-bottom: 5px;
+}
+.container1{
+    width: 400px;
+    .table{
+        float: center;
+        border-bottom: 1px solid grey;
+        display: flex;
+        .todo{
+            width: 400px;
+            text-align: left;
+            .input{
+                width:150px;
+                height: 20px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        .edit{
+            margin-right: 5px;
+            margin-top: 5px;
+            padding: 10px;
+            border:none;
+            height: 30px;
+            width: 50px;
+            border-radius: 3px;
+        }
+        .delete{
+            margin-top: 5px;
+            padding: 10px;
+            border:none;
+            height: 30px;
+            width: 70px;
+            border-radius: 3px;
+            
+        }
+    }
+>>>>>>> e13c07a79cee87901047f598b414a2549c4c2327
 }

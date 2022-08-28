@@ -13,12 +13,19 @@ import Home from '../components/Home'
 import Nav from '../components/Nav'
 import Listuser from '../components/Listuser';
 import Detailuser from '../components/Detailuser';
-import Template from '../components/Template'
+import Templatee from '../components/Templatee'
 import 'react-image-lightbox/style.css'
+<<<<<<< HEAD
 import Form from '../components/FunctionForm';
 import Covid from '../components/Covid19';
 import Blog from '../components/Blog';
 import Detail from '../components/Detail';
+=======
+import Covid from '../components/Covid';
+import Blog from '../components/Blog';
+import Viewdetail from '../components/Viewdetail';
+import AddNewBlog from '../components/AddNewBlog';
+>>>>>>> e13c07a79cee87901047f598b414a2549c4c2327
 
 function App() {
   return (
@@ -41,7 +48,19 @@ function App() {
               <Detailuser />
             </Route>
             <Route path="/template">
-              <Template/>
+              <Templatee/>
+            </Route>
+            <Route path="/covid-19">
+              <Covid/>
+            </Route>
+            <Route path="/blog" exact>
+              <Blog/>
+            </Route>
+            <Route path="/blog/:id">
+              <Viewdetail/>
+            </Route>
+            <Route path="/add-new-user">
+              <AddNewBlog/>
             </Route>
             <Route path="/covid19">
               <Covid />

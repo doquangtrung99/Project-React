@@ -72,23 +72,23 @@ class Form extends React.Component {
                     <>
                     {Arr.map((item, index) => {
                         return (
-                            <>
+                           
                                 <div className="table" key={item.id}>
                                     {isEmtyojb === true ?
-                                    <span>{index + 1} - {item.title}</span>
+                                    <span className="todo">{index + 1} - {item.title}</span>
                                     :
                                     <>
                                     {isEmtyojb === false && item.id === handlearr.id ?
-                                    <span>{index +1} - <input value={handlearr.title} type='text' onChange={(event) => this.handleedit(event)}/></span>
+                                    <span className="todo">{index +1} - <input className="input" value={handlearr.title} type='text' onChange={(event) => this.handleedit(event)}/></span>
                                     :
-                                    <span>{index + 1} - {item.title}</span>
+                                    <span className="todo">{index + 1} - {item.title}</span>
                                     }
                                     </>
                                     }
-                                    <button className="edit" onClick={() => this.edit(item)} >{isEmtyojb === false && item.id === handlearr.id? 'Save' : 'Edit'}</button>
-                                    <button onClick={() => this.delete(item)}>Delete</button>
+                                    <button className="edit"onClick={() => this.edit(item)} >{isEmtyojb === false && item.id === handlearr.id? 'Save' : 'Edit'}</button>
+                                    <button className="delete" onClick={() => this.delete(item)}>Delete</button>
                                 </div>
-                            </>
+                           
                         )
                     })}
                     </>

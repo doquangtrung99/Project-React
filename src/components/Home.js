@@ -39,7 +39,7 @@ class Home extends React.Component {
             <div>
                 {listuser.map((item,index) => {
                     return(
-                        <div>
+                        <div key={index}>
                             {index +1} - {item.name} <span onClick={() => this.delete(item)}>X</span>
                             {localStorage.removeItem("username1")}
                         </div>

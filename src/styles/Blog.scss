@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .button1{
     font-size: 15px;
     border: none;
@@ -35,3 +36,34 @@
         }
     }
 }
+=======
+.topcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    .single-blog{
+        border: 1px solid grey;
+        margin-left: 8px;
+        width: 350px;
+        height: 350px;
+        padding: 5px;
+        font-size: 20px;
+        text-align: left;
+        .title{
+            font-size: 25px;
+            font-weight: 200px;
+            height: 100px;
+            text-align: center;
+        }
+        
+        .body{
+            height: 200px;
+            font-size: 20px;
+        }
+        button{
+            justify-content: center;
+        }
+    }
+}                                                                                                                                                                     
+>>>>>>> e13c07a79cee87901047f598b414a2549c4c2327
