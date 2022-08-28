@@ -1,5 +1,9 @@
 import React from "react";
 import { connect } from 'react-redux'
+import picture1 from '../assets/images/picture1.jpg'
+import picture2 from '../assets/images/picture2.jpg'
+import '../styles/Home.scss'
+
 class Home extends React.Component {
 
     
@@ -13,6 +17,25 @@ class Home extends React.Component {
     render() {
         let listuser = this.props.data
         return (
+            <>
+            <div className="containterr">
+                <div className="topp">
+                    <img className="imgg" src={picture1}/>
+                </div>
+                    
+                <div className="bott">
+                    <div className="insidebott">
+                        <img className="imggg" src={picture2}/>
+                        <p>hi</p>
+                        <p>his</p>
+                    </div>
+                    <div className="inside">
+                        acbdxyzasdasfasfas
+                    </div>
+                </div>
+
+            
+            </div>
             <div>
                 {listuser.map((item,index) => {
                     return(
@@ -25,6 +48,7 @@ class Home extends React.Component {
                 })}
                 <button onClick={() => this.add()}>Add</button>
             </div>
+            </>
         )
     }
 }

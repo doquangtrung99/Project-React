@@ -2,7 +2,7 @@
 import './App.scss';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Form from '../components/Form';
+//import Form from '../components/Form';
 import {
   BrowserRouter,
   Switch,
@@ -15,6 +15,10 @@ import Listuser from '../components/Listuser';
 import Detailuser from '../components/Detailuser';
 import Template from '../components/Template'
 import 'react-image-lightbox/style.css'
+import Form from '../components/FunctionForm';
+import Covid from '../components/Covid19';
+import Blog from '../components/Blog';
+import Detail from '../components/Detail';
 
 function App() {
   return (
@@ -39,6 +43,16 @@ function App() {
             <Route path="/template">
               <Template/>
             </Route>
+            <Route path="/covid19">
+              <Covid />
+            </Route>
+            <Route path="/blog" exact>
+              <Blog />
+            </Route>
+            <Route path="/blog/:id" >
+              <Detail />
+            </Route>
+
           </Switch>
         </header>
         <ToastContainer

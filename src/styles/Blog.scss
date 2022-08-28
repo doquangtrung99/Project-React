@@ -1,0 +1,37 @@
+.button1{
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+}
+.container-boss{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+    .container-child{
+        border:1px solid grey;
+        width: 400px;
+        margin:15px;
+        height: 250px;
+    }
+    .title{
+        border-bottom: 1px solid;
+        height: 60px;
+        font-size: 20px;
+    }
+    .body{
+        text-align: left;
+        font-size: 20px;
+        padding:5px;
+        height: 130px;
+    }
+    .button{
+        margin-top: 19px;
+        .button2{
+            width: 60px;
+            font-size: 15px;
+            border: none;
+        }
+    }
+}

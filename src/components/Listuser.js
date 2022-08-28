@@ -2,6 +2,8 @@ import React from "react";
 import axios from 'axios'
 import '../styles/Listuser.scss'
 import {withRouter} from 'react-router-dom'
+import Countdown from "./Countdown";
+
 class Listuser extends React.Component{
     
     state = {
@@ -21,6 +23,9 @@ class Listuser extends React.Component{
         let {arr} = this.state
         return(
             <>
+            <div>
+                <Countdown/>
+            </div>
                 {arr.map((item,index) => {
                     return(
                         <>

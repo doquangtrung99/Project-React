@@ -59,9 +59,12 @@
         line-height: 40px;
     }
     .input{
-        display: block;
+        display: flex;
         width: 30px;
-        
+        input{
+            width: 30px;
+            text-align: center;
+        }
     }
     .buy{
         background-color: #ff3945;
