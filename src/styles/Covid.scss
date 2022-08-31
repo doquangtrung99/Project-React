@@ -2,7 +2,11 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 1200px;
+<<<<<<< HEAD
+    margin-top: 15px;
+=======
     margin-top: 20px;
+>>>>>>> e13c07a79cee87901047f598b414a2549c4c2327
   }
   
   td, th {
@@ -12,5 +16,11 @@ table {
   }
   
   tr:nth-child(even) {
+<<<<<<< HEAD
+    background-color: #8b8787;
+  }
+  
+=======
     background-color: #ada6a6;
   }
+>>>>>>> e13c07a79cee87901047f598b414a2549c4c2327

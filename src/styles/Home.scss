@@ -1,0 +1,35 @@
+.containterr{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    .topp{
+    border: 1px solid red;
+    height: 300px;
+        .imgg{
+            object-fit: cover;
+            width: 500px;
+            height: 300px;
+        }
+    }
+    .bott{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    height: 198px;
+    column-gap: 20px;
+        .insidebott{
+           background-color: lightblue;
+            .imggg{
+                width: 60px;
+                border-radius: 30px;
+            }
+        p{
+            margin: 0px;
+        }
+        }
+        .inside{
+            background-color: lightblue;
+        }
+    }
+}
