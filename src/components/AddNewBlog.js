@@ -1,18 +1,27 @@
 import React from "react";
 import '../styles/SubmitForm.scss'
 import { useState,useEffect } from "react";
+import axios from "axios";
 
-
-const AddNewBlog = () => {
+const AddNewBlog = (props) => {
 
     const [title,setTitle] = useState("") 
     const [content,setContent] = useState("") 
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if(!title || !content){
             alert('missing params')
+            return;
         }
-        console.log("Check",title,content)
+
+        let data = {
+            title:title,
+            body:content
+        }
+        let res = await axios.post('https://jsonplaceholder.typicode.com/posts',data)
+        
+        props.handleadd(res.data)
+        props.handleClose()
     }
 
     return(

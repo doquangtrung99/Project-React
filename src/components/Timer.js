@@ -1,4 +1,3 @@
-import { calendarFormat } from "moment";
 import React , {useState,useEffect} from "react";
 
 
@@ -24,7 +23,7 @@ class Timer extends React.Component{
     }
 
     componentDidUpdate(prevProps,preState){
-        if( this.state.coundown === 0){
+        if( preState.coundown !== this.state.coundown  && this.state.coundown === 0){
            return clearInterval(timer)
         }
     }
@@ -44,21 +43,27 @@ const SetTimer = () => {
     const [count, setCount] = useState(5)
 
     useEffect(() => {
+        console.log("1")
         if(count === 0 ){
             return ;
         }
       let timmer = setInterval(() => {
             setCount(count - 1)
+            console.log("2")
+
        }, 1000)
        
        return () => {
         clearInterval(timmer)
+        console.log("3")
+
        }
     },[count])
 
     return (
         <>
         <div>
+            {        console.log("0")}
             {count}
         </div>
         <div>

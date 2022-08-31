@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'
+import Example from "./practise/example";
 class Home extends React.Component {
 
     
@@ -13,6 +14,10 @@ class Home extends React.Component {
     render() {
         let listuser = this.props.data
         return (
+            <>
+            <div>
+                <Example/>
+            </div>
             <div>
                 {listuser.map((item,index) => {
                     return(
@@ -25,6 +30,7 @@ class Home extends React.Component {
                 })}
                 <button onClick={() => this.add()}>Add</button>
             </div>
+            </>
         )
     }
 }
